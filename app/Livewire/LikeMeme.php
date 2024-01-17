@@ -23,7 +23,7 @@ class LikeMeme extends Component
 
     public function like(){
         if($this->meme->checkLike(auth()->user())){
-            auth()->user()->likes()->where('meme_id', $this->meme->id)->delete();
+            $this->meme->where('user_id', auth()->user()->id)->delete();
             $this->isLiked = false;
             $this->likes--;
         }else{
