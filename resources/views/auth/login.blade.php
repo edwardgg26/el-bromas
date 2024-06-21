@@ -10,7 +10,7 @@ Iniciar Sesion
         @csrf
 
         @if (session('error'))    
-        <div class="bg-red-50 rounded-md p-2 mb-4">
+        <div class="bg-red-500 rounded-md p-2 mb-4">
             <p class="text-white text-center">{{ session('error') }}</p>
         </div>
         @endif
